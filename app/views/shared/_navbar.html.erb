@@ -1,0 +1,54 @@
+<nav class="mx-auto navbar navbar-expand-lg barra">
+    <div class="container">
+        <%= link_to "Desafio JOBS", root_path, class:"navbar-brand" %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+            
+            <div class="d-flex w-75 justify-content-between align-items-center">
+                <div class="nav-item mx-2">
+                    <%= link_to "Ofertas de trabajo", offers_path, class:"nav-link active", ariaCurrent: "page" %>
+                </div>
+                <div class="nav-item">
+                    <%= link_to 'Tus postulaciones', my_postulations_path, class: 'nav-link' %>
+                </div>
+
+                <div>
+                    <% if user_signed_in? %>
+                        <%# <% if current_user.image.attached? %z>
+                            <%= image_tag(current_user.image, style:"height: 50px;", class:"avatar") %z>
+                        <% end %z> %>
+                    <% end %>
+                </div>
+            </div>
+            <div class="ms-3">
+                <% if current_user %>
+                    Hola
+                    <%= current_user.name %>
+                        <%# <% if current_user.admin? %z>
+                            <%= current_user.role %z>
+                        <% end %z> %>
+                <% else %>
+                    Dale registrate o conectate
+                <% end %>
+            </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
+                        <ul class="dropdown-menu">
+                            <% if user_signed_in? %>
+                                <li><%= button_to 'Editar Usuario', edit_user_registration_path, class: 'dropdown-item', method: :get %></li>
+                                <li><%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
+                            <% else %>
+                                <li><%= link_to 'Iniciar sesión',  new_user_session_path, class: 'dropdown-item'%></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><%= link_to 'Registro',  new_user_registration_path, class: 'dropdown-item'%></li>
+                            <% end %>  
+                        </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

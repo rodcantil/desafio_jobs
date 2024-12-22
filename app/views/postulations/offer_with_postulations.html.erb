@@ -1,0 +1,13 @@
+<h1>OFFER</h1>
+<ul>
+    <% @offers.each do |offer| %>
+        <li>
+            <%= offer.title %>
+            <%= offer.description %>
+            <%= offer.find_status_user_relation(current_user) %>
+            <p>
+                <%= link_to "Show this offer", offer %>
+            </p>
+        </li>
+    <% end %>
+</ul>
