@@ -3,13 +3,10 @@ class Postulation < ApplicationRecord
   belongs_to :user
 
   validates :status, acceptance: {
-    accept: %w[Postular]
+    accept: %w[postulado]
   }
 
   def self.status
-    %w[Postular]
+    %w[postulado]
   end
-
-
-
 end

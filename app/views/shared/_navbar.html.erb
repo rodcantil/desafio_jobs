@@ -5,22 +5,24 @@
         <span class="navbar-toggler-icon"></span>
         </button>
             
-            <div class="d-flex w-75 justify-content-between align-items-center">
+            <div class="d-flex w-75 justify-content-start align-items-center">
                 <div class="nav-item mx-2">
                     <%= link_to "Ofertas de trabajo", offers_path, class:"nav-link active", ariaCurrent: "page" %>
                 </div>
-                <div class="nav-item">
-                    <%= link_to 'Tus postulaciones', my_postulations_path, class: 'nav-link' %>
-                </div>
-
-                <div>
+                <div class="nav-item mx-2">
                     <% if user_signed_in? %>
-                        <%# <% if current_user.image.attached? %z>
-                            <%= image_tag(current_user.image, style:"height: 50px;", class:"avatar") %z>
-                        <% end %z> %>
+                        <%= link_to 'Tus postulaciones', my_postulations_path, class: 'nav-link' %>
                     <% end %>
                 </div>
             </div>
+
+                <div>
+                    <% if user_signed_in? %>
+                        <% if current_user.image.attached? %>
+                            <%= image_tag(current_user.image, style:"height: 50px;", class:"avatar") %>
+                        <% end %>
+                    <% end %>
+                </div>
             <div class="ms-3">
                 <% if current_user %>
                     Hola

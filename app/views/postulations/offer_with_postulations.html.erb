@@ -1,13 +1,21 @@
-<h1>OFFER</h1>
-<ul>
+<h1>Ofertas Postuladas</h1>
+<div class="">
     <% @offers.each do |offer| %>
-        <li>
+        <p>
+            <strong>Oferta Laboral:</strong>
             <%= offer.title %>
+        </p>
+
+        <p>
+            <strong>Description: </strong>
             <%= offer.description %>
+        </p>
+
+        <p>
+            <strong>Estado: </strong>
             <%= offer.find_status_user_relation(current_user) %>
-            <p>
-                <%= link_to "Show this offer", offer %>
-            </p>
-        </li>
+        </p>
+
+        <p><%= link_to "Show this offer", offer %></p>
     <% end %>
-</ul>
+</div>

@@ -1,9 +1,7 @@
 <div class="container">
-    <ul>
-        <% Postulation.status.each do |status| %>
-            <li> <%= @offer.count_with_status(status) %> </li>
-        <% end %>
-    </ul>
+    <% Postulation.status.each do |status| %>
+        <%= @offer.count_with_status(status) %>
+    <% end %>
 </div>
 
 

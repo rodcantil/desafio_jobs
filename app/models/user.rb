@@ -7,4 +7,5 @@ class User < ApplicationRecord
 
          has_many :offers
          has_many :postulations
+         has_one_attached :image
 end

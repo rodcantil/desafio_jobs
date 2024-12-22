@@ -1,7 +1,7 @@
 <div class="container">
-    <ul>
-        <% Postulation.status.each do |status| %>
-            <li><%= button_to "#{status}", user_postulation_path(offer_id: @offer.id, status: status), method: :post %></li>
-        <% end %>
-    </ul>
+
+    <% Postulation.status.each do |status| %>
+        <%= button_to "POSTULAR", user_postulation_path(offer_id: @offer.id, status: status), method: :post, class:"btn btn-info" %>
+    <% end %>
+
 </div>
