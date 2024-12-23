@@ -1,5 +1,6 @@
+<p style="color: green"><%= notice %></p>
 <h1>Ofertas Postuladas</h1>
-<div class="">
+<div class="mt-4">
     <% @offers.each do |offer| %>
         <p>
             <strong>Oferta Laboral:</strong>
@@ -16,6 +17,9 @@
             <%= offer.find_status_user_relation(current_user) %>
         </p>
 
-        <p><%= link_to "Show this offer", offer %></p>
+        <p class="text-end">
+            <%= link_to "Ver Oferta Laboral", offer, class:"btn boton_color fw-bold" %>
+        </p>
+        
     <% end %>
 </div>

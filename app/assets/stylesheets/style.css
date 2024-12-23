@@ -1,0 +1,27 @@
+.imagen_oferta {
+max-width: 70%;
+margin: auto;
+border-radius: 10px 10px 10px 10px
+
+
+
+}
+
+.base_offer {
+    height: 250px;
+}
+
+.avatar {
+    clip-path: circle();
+
+}
+
+.texto_carta {
+    overflow: hidden;
+}
+
+.barra, .titulo_comentarios, 
+
+.boton_color {
+    background-color: aquamarine;
+}

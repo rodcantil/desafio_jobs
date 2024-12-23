@@ -1,7 +1,10 @@
 class OffersController < ApplicationController
   before_action :set_offer, only: %i[ show edit update destroy ]
-  before_action :redirect_user_vs_creador, only: %i[ edit update destroy ]
-  before_action :authenticate_user!, except: [ :index ]
+  before_action :authenticate_user!, except: [ :index, :show ]
+  before_action only: [ :create, :new, :edit, :update, :destroy ] do
+    authorize_request([ "admin" ])
+  end
+
   # GET /offers or /offers.json
   def index
     @offers = Offer.all
@@ -66,12 +69,6 @@ class OffersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def offer_params
-      params.expect(offer: [ :title, :image, :description, :user_id ])
-    end
-
-    def redirect_user_vs_creador
-      if current_user.id != @offer.user_id
-        redirect_to offers_path, notice: "Acceso no Permitido"
-      end
+      params.expect(offer: [ :title, :description, :user_id, images: [] ])
     end
 end

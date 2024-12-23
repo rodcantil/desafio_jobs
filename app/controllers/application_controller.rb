@@ -9,4 +9,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [ :name, :image, :age, :phone, :occupation, :year_exp ])
     devise_parameter_sanitizer.permit(:account_update, keys: [ :name, :image, :age, :phone, :occupation, :year_exp ])
   end
+  private
+  def authorize_request(kind = nil)
+    unless kind.include?(current_user.role)
+    redirect_to offers_path, notice: "No estas permitido a realizar esta accion."
+    end
+  end
 end

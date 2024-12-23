@@ -27,9 +27,9 @@
                 <% if current_user %>
                     Hola
                     <%= current_user.name %>
-                        <%# <% if current_user.admin? %z>
-                            <%= current_user.role %z>
-                        <% end %z> %>
+                        <% if current_user.admin? %>
+                            <%= current_user.role %>
+                        <% end %>
                 <% else %>
                     Dale registrate o conectate
                 <% end %>

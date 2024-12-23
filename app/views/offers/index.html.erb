@@ -1,16 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<% content_for :title, "Offers" %>
+<% content_for :title, "Desafio JOBS", class:"text center" %>
 
-<h1>Offers</h1>
+<h1>Ofertas de Trabajo</h1>
+<p class="text-end">
+  <%= link_to "Nueva Oferta", new_offer_path, class:"btn boton_color fw-bold mb-3" %>
+</p>
 
 <div id="offers">
   <% @offers.each do |offer| %>
     <%= render offer %>
-    <p>
-      <%= link_to "Show this offer", offer %>
+    <p class="text-end">
+      <%= link_to "Ver Oferta Laboral", offer, class:"btn boton_color fw-bold" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New offer", new_offer_path %>

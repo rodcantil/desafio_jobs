@@ -1,22 +1,15 @@
 <div id="<%= dom_id offer %>">
-  <p>
-    <strong>Title:</strong>
-    <%= offer.title %>
-  </p>
+  <div class="d-flex base_offer">
+    <div class="card justify-content-center col-3">
+      <%= image_tag offer.images[0], class: 'imagen_oferta' %>
+    </div>
 
-  <p>
-    <strong>Image:</strong>
-    <%= offer.image %>
-  </p>
+      <div class="card">
+        <h5 class="card-title"><%= offer.title %></h5>
+        <p class="card-text texto_carta">
+          <strong>Descripcion: </strong><%= offer.description%><br>
+        </p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= offer.description %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= offer.user_id %>
-  </p>
-
-</div>
+  </div>

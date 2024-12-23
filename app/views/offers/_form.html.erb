@@ -16,20 +16,16 @@
     <%= form.text_field :title %>
   </div>
 
-  <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.text_field :image %>
+  <div class="form-group">
+    <%= form.label :images %>
+    <%= form.file_field :images, multiple: true, class: 'form-control' %>
   </div>
-
   <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.textarea :description %>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
+
 
   <div>
     <%= form.submit %>
