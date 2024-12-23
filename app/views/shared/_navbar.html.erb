@@ -14,6 +14,13 @@
                         <%= link_to 'Tus postulaciones', my_postulations_path, class: 'nav-link' %>
                     <% end %>
                 </div>
+                
+                <div class="nav-item mx-2">
+                    <% if user_signed_in? && current_user.admin? %>
+                        <%= link_to 'Lista de usuarios', my_users_path, class: 'nav-link' %>
+                    <% end %>
+                </div>
+
             </div>
 
                 <div>
@@ -41,12 +48,14 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Usuarios</a>
                         <ul class="dropdown-menu">
                             <% if user_signed_in? %>
-                                <li><%= button_to 'Editar Usuario', edit_user_registration_path, class: 'dropdown-item', method: :get %></li>
+                                <% if current_user.admin? %>
+                                    <li><%= link_to 'Registro',  new_user_registration_path, class: 'dropdown-item'%></li>
+                                    <li><%= button_to 'Editar Usuario', edit_user_registration_path, class: 'dropdown-item', method: :get %></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                <% end %>
                                 <li><%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
                             <% else %>
                                 <li><%= link_to 'Iniciar sesión',  new_user_session_path, class: 'dropdown-item'%></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><%= link_to 'Registro',  new_user_registration_path, class: 'dropdown-item'%></li>
                             <% end %>  
                         </ul>
                 </li>

@@ -1,0 +1,54 @@
+<%= form_for(@user, url: user_registration_path) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "Agrega tu imagen de perfil" %><br />
+    <%= f.file_field :image, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.text_field :age, autocomplete: "age", class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :phone  %><br />
+    <%= f.text_field :phone, autocomplete: "phone", class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :occupation %><br />
+    <%= f.text_field :occupation, autocomplete: "occupation", class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.label :year_exp %><br />
+    <%= f.text_field :year_exp, autocomplete: "Years Experience", class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autocomplete: "email", class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>

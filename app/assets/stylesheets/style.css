@@ -1,12 +1,33 @@
 .imagen_oferta {
-max-width: 70%;
+max-width: 80%;
 margin: auto;
 border-radius: 10px 10px 10px 10px
+}
 
+.foto_perfil {
+    max-width: 70%;
+    margin: auto;
+    border-radius: 10px 10px 10px 10px
 
+}
+.foto_perfil2 {
+    height: 300px;
+
+    border-radius: 10px 10px 10px 10px
 
 }
 
+.card_user {
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    width: 20rem;    
+    height: 435px;
+
+
+    
+}
 .base_offer {
     height: 250px;
 }
@@ -20,8 +41,7 @@ border-radius: 10px 10px 10px 10px
     overflow: hidden;
 }
 
-.barra, .titulo_comentarios, 
 
-.boton_color {
-    background-color: aquamarine;
+.boton_color, .barra {
+    background-color: rgb(245, 235, 175);
 }

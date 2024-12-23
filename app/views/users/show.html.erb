@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Lista de Usuarios", class:"text center" %>
+
+<div class="d-flex justify-content-center">
+    <div class="flex-column col-6 ">
+        <div class="mb-3">
+            <%= image_tag @user.image, class: 'foto_perfil2' %>
+        </div>
+    <h2 class=""><%= @user.name %></h2>
+    <div>
+        <p class="">
+            <strong>Edad: </strong><%= @user.age%><br>
+        </p>
+        <p class="">
+            <strong>Telefono: </strong><%= @user.phone%><br>
+        </p>
+        <p class="">
+            <strong>Ocupacion: </strong><%= @user.occupation%><br>
+        </p>
+        <p class="">
+            <strong>Años de Experiencia: </strong><%= @user.year_exp%><br>
+        </p>
+    </div>
+</div>
+
+
+
+
+<div class="d-flex align-items-center">
+    <div class=" gap-2 my-5">
+      <%= link_to "Volver a Usuarios", my_users_path, class:"btn btn-dark" %>
+    </div>
+  </div>
