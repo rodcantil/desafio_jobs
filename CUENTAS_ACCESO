@@ -12,11 +12,19 @@ id:         3
 mail:       karina@karina.com
 password:   123123
 
+ADMINISTRADOR
 id:         4
 mail:       esteban@esteban.com
 password:   12345678
-ADMINISTRADOR
+
 
 id:         5
-mail        pedro@pedro.com
+mail:       pedro@pedro.com
 password:   pedropedro
+
+
+
+*nota: No se pudo crear una cuenta en aws porque no se pudo verificar el numero telefonico.
+      Inicié un caso parar que me puedan atender pero aun no me verifican de esto ya han pasado 6 dias.
+
+*nota2: Por lo que en vez de usar aws s3, solo usé activestorage local.

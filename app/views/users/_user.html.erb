@@ -4,7 +4,7 @@
         <div class="card card_user">
 
             <div class="card justify-content-center">
-                <%= image_tag user.image, class: 'foto_perfil' %>
+                <%= image_tag user.image if user.image.attached?, class: 'foto_perfil' %>
             </div>
             <br>
             <h5 class="card-title text-center"><%= user.name %></h5>
@@ -14,3 +14,4 @@
         </div>
     </div>
 </div>
+
