@@ -1,24 +1,18 @@
-# README
+Este proyecto es el último proyecto en rails de mi BootCamp, ha quedado muy bueno:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Es un portal para buscar trabajo:
 
-Things you may want to cover:
+El administrador crea las ofertas de trabajo con fotos (ActiveStorage:local)
+El administrador crea las cuentas de usuarios y las edita.
 
-* Ruby version
+Los usuarios ingresan autenticados y pueden leer y postular a las ofertas.
 
-* System dependencies
+Los usuarios sin autenticar tambien pueden ver las vistas index con las ofertas laborales, 
+tambien pueden ingresar a la vista show que muestra detalles de una oferta.
 
-* Configuration
+Los accesos para registrar usuario nuevo estan bloqueadas. Uso exclusivo de administrador
 
-* Database creation
+El proyecto es mi mejor proyecto de Rails a la fecha. Aún le falta mejorar el diseño y quedaría COOL!!!
 
-* Database initialization
+Gracias por VISITARME!
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
