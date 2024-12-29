@@ -1,4 +1,10 @@
-Este proyecto es el último proyecto en rails de mi BootCamp, ha quedado muy bueno:
+Para mi Portafolio :pushpin:
+
+Proyecto elaborado en Ruby on Rails 
+
+
+
+Este proyecto lo hice en mi BootCamp, ha quedado muy bueno :collision: :dizzy:
 
 Es un portal para buscar trabajo:
 
@@ -14,5 +20,5 @@ Los accesos para registrar usuario nuevo estan bloqueadas. Uso exclusivo de admi
 
 El proyecto es mi mejor proyecto de Rails a la fecha. Aún le falta mejorar el diseño y quedaría COOL!!!
 
-Gracias por VISITARME!
+Gracias por VISITARME!!! :raised_hands:
 
