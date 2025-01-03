@@ -1,24 +1,26 @@
-# README
+Para mi Portafolio :pushpin:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Comienzo mi camino TI como junior! :beginner:
 
-Things you may want to cover:
+Proyecto elaborado en Ruby on Rails :gem:
 
-* Ruby version
+Este proyecto lo hice en mi BootCamp, ha quedado muy bueno :collision: :dizzy:
 
-* System dependencies
+  :diamond_shape_with_a_dot_inside::diamond_shape_with_a_dot_inside:Es un portal para buscar trabajo::diamond_shape_with_a_dot_inside::diamond_shape_with_a_dot_inside:
+  
+  El administrador crea las ofertas de trabajo con fotos (ActiveStorage:local)
+  El administrador crea las cuentas de usuarios y las edita.
+  
+  Los usuarios ingresan autenticados y pueden leer y postular a las ofertas.
+  
+  Los usuarios sin autenticar tambien pueden ver las vistas index con las ofertas           laborales, 
+  tambien pueden ingresar a la vista show que muestra detalles de una oferta.
+  
+  Los accesos para registrar usuario nuevo estan bloqueadas. Uso exclusivo de               administrador
+  
+  El proyecto es mi mejor proyecto de Rails a la fecha. Aún le falta mejorar el diseño y    quedaría COOL!!! :soon:
+  
+:diamond_shape_with_a_dot_inside::diamond_shape_with_a_dot_inside::diamond_shape_with_a_dot_inside::diamond_shape_with_a_dot_inside:
 
-* Configuration
+Gracias por VISITARME!!! :raised_hands:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
